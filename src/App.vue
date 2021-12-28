@@ -1,26 +1,61 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class = "container">
+        <component
+            :is="screens[position]"
+            :question = "question"
+            :ans = "ans"
+            @goto = "jumpPage"
+            @question = "passingQuestion"
+            @showAns = "getAns"
+        />
+    </div>
+
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+<script>
+    import inputDecision from "./components/inputDecision.vue"
+    import outputDecision from "./components/outputDecision.vue"
+
+    export default {
+        components:{
+            inputDecision,
+            outputDecision
+        },
+        data(){
+            return {
+                list: [
+                    "Yes",
+                    "No",
+                    "Maybe"
+                ],
+                screens: ["inputDecision","outputDecision"],
+                position: 0,
+                question: "",
+                ans: ""
+            }
+        },
+        methods:{
+            jumpPage(position) {
+                this.position = position
+            },
+            passingQuestion(question) {
+                this.question = question
+            },
+
+            createAns() {
+                let rand = this.list[Math.floor(Math.random()*this.list.length)];
+                this.ans = rand;
+            },
+            getAns() {
+                this.createAns()
+            }
+        }
+    }
+
 </script>
 
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    @import "./assets/sass/style.css";
 </style>

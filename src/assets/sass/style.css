@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css?family=Ibarra+Real+Nova&display=swap");
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Ibarra Real Nova', serif;
+  padding: 0;
+  margin: 0;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(75, 123, 211, 0.5)), to(rgba(22, 215, 177, 0.3))), url(../snow-forest.jpg);
+  background: linear-gradient(to right, rgba(75, 123, 211, 0.5), rgba(22, 215, 177, 0.3)), url(../snow-forest.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container {
+  min-height: 300px;
+  width: 430px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-family: 'Ibarra Real Nova', serif;
+  color: #fff;
+  margin: 0;
+  font-size: 44px;
+  text-shadow: .5px .5px 2px grey;
+  letter-spacing: 3px;
+  text-align: center;
+  font-weight: 700;
+}
+
+h3 {
+  font-family: 'Ibarra Real Nova', serif;
+  color: #fff;
+  margin: 0;
+  font-size: 35px;
+  text-shadow: .5px .5px 2px grey;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+h4 {
+  font-family: 'Ibarra Real Nova', serif;
+  color: #000;
+  text-align: center;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  background: rgba(255, 255, 255, 0.25);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.mid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.btn {
+  background: #daa45c;
+  color: #ffffff;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  color: #fff;
+  background: #fc7233;
+}
+
+.viewer {
+  font-size: 20px;
+  font-weight: 100;
+}
+/*# sourceMappingURL=style.css.map */
