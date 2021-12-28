@@ -18,7 +18,7 @@ npm install
 npm run serve
 ```
 
-# Deployed
+# Deployment
 Published to `http://overconfident-art.surge.sh/`
 
 # Screenshots
